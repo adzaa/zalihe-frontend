@@ -47,7 +47,7 @@ const FormEditUser = () => {
   };
   return (
     <div>
-      <h1 className="title">Nalog</h1>
+      <h1 className="title">Zaposlenici</h1>
       <h2 className="subtitle">Izmjeni Podatke</h2>
       <div className="card is-shadowless">
         <div className="card-content">

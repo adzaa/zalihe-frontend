@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { IoPerson, IoPricetag, IoHome, IoLogOut } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { LogOut, reset } from "../features/authSlice";
+import { Link } from "react-router-dom";
+
 
 const Sidebar = () => {
   const dispatch = useDispatch();
@@ -53,10 +55,14 @@ const Sidebar = () => {
             </ul>
           </div>
         )}
-
         <p className="menu-label">Settings</p>
         <ul className="menu-list">
-          <li>
+        <li>
+        {user && user.uuid && (
+           <NavLink to={`/users/edit/${user.uuid}`}> <IoPerson />Postavke Naloga</NavLink>
+      )}  
+      </li>
+        <li>
             <button onClick={logout} className="button is-white">
               <IoLogOut /> Odjava
             </button>

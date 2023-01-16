@@ -17,6 +17,8 @@ import Sirovine from "./pages/Sirovine";
 import AddSirovina from "./pages/AddSirovina";
 import EditSirovina from "./pages/EditSirovina";
 
+import ChangePassword from "./components/ChangePassword";
+
 function App() {
   return (
     <div>
@@ -24,9 +26,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
+
           <Route path="/users" element={<Users />} />
           <Route path="/users/add" element={<AddUser />} />
           <Route path="/users/edit/:id" element={<EditUser />} />
+
           <Route path="/products" element={<Products />} />
           <Route path="/products/add" element={<AddProduct />} />
           <Route path="/products/edit/:id" element={<EditProduct />} />
@@ -38,6 +42,8 @@ function App() {
           <Route path="/sirovine" element={<Sirovine />} />
           <Route path="/sirovine/add" element={<AddSirovina />} />
           <Route path="/sirovine/edit/:id" element={<EditSirovina />} />
+
+          <Route path="/change-password/:id" element={<ChangePassword />} />
         </Routes>
       </BrowserRouter>
     </div>
